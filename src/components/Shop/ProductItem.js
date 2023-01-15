@@ -11,7 +11,7 @@ const ProductItem = (props) => {
 
   const addToCartHandler = () => {
     dispatch(cartActions.addItemToCart({ id, title, price }));
-    dispatch(uiActions.initialValue());
+    dispatch(uiActions.setInitialValue());
   };
 
   return (

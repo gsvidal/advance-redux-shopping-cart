@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialUIState = {
   isCartOpen: true,
   notification: null,
-  isInitial: true,
+  isInitialLoading: true,
 };
 
 const uiSlice = createSlice({
@@ -20,8 +20,8 @@ const uiSlice = createSlice({
         message: action.payload.message,
       };
     },
-    initialValue(state) {
-      state.isInitial = false;
+    setInitialValue(state) {
+      state.isInitialLoading = false;
     },
   },
 });
