@@ -2,6 +2,7 @@ import Card from '../UI/Card';
 import classes from './ProductItem.module.css';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
+import { uiActions } from '../../store/ui-slice';
 
 const ProductItem = (props) => {
   const { id, title, price, description } = props;
@@ -10,6 +11,7 @@ const ProductItem = (props) => {
 
   const addToCartHandler = () => {
     dispatch(cartActions.addItemToCart({ id, title, price }));
+    dispatch(uiActions.initialValue());
   };
 
   return (
