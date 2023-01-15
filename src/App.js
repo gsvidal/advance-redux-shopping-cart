@@ -14,6 +14,8 @@ function App() {
   const isInitialLoading = useSelector((state) => state.ui.isInitialLoading);
   const dispatch = useDispatch();
 
+  console.log(notification);
+
   useEffect(() => {
     dispatch(fetchCartData());
   }, [dispatch]);
@@ -27,7 +29,7 @@ function App() {
 
   return (
     <>
-      {notification && (
+      {notification && notification.status !== 'clear' && (
         <Notification
           status={notification.status}
           title={notification.title}

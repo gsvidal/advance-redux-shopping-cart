@@ -20,7 +20,7 @@ export const fetchCartData = () => {
 
     try {
       const cartData = await fetchData();
-      console.log(cartData);
+
       dispatch(cartActions.replaceFetchedCart(cartData));
     } catch (error) {
       dispatch(
@@ -44,9 +44,8 @@ export const sendCartData = (cart) => {
     );
 
     const sendRequest = async () => {
-      console.log(JSON.stringify(cart));
       const response = await fetch(
-        'https://advance-redux-shopping-cart-default-rtdb.firebaseio.com/cart.json',
+        'https://advasdfnce-redux-shopping-cart-default-rtdb.firebaseio.com/cart.json',
         {
           method: 'PUT',
           body: JSON.stringify(cart),
@@ -62,17 +61,25 @@ export const sendCartData = (cart) => {
         uiActions.showNotification({
           status: 'success',
           title: 'Success!',
-          message: 'Cart items sent successfully',
+          message: 'Cart items sent successfully!',
         })
       );
     } catch (error) {
       dispatch(
         uiActions.showNotification({
           status: 'error',
-          title: 'Failed!',
+          title: 'Something went wrong',
           message: 'Failed at sending cart items',
         })
       );
     }
+    // After either success or error notification component should be cleared
+    setTimeout(() => {
+      dispatch(
+        uiActions.showNotification({
+          status: 'clear',
+        })
+      );
+    }, 3000);
   };
 };

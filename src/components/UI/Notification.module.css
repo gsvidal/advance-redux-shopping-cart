@@ -1,7 +1,6 @@
 .notification {
   width: 100%;
   height: 3rem;
-  background-color: #1a8ed1;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 10%;
@@ -15,10 +14,25 @@
   margin: 0;
 }
 
+.pending {
+  background-color: #1a8ed1;
+}
+
 .error {
   background-color: #690000;
+  animation: fade 3.2s linear;
 }
 
 .success {
   background-color: #1ad1b9;
+  animation: fade 3.2s linear;
+}
+
+@keyframes fade {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
