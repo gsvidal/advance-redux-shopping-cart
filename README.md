@@ -1,7 +1,7 @@
 # Redux Shopping Cart
 
 <a href="https://www.gonzalovidal.dev/budget-planner-2.0/">
-  <img src="https://i.postimg.cc/HnTy5ktg/ezgif-com-gif-maker-3.gif">
+  <img src="https://i.postimg.cc/HnTy5ktg/ezgif-com-gif-maker-3.gif" width="700">
 </a> 
 
 ### A Shopping Cart where we can add or remove products to the shopping cart and send/fetch data to a backend(firebase)
