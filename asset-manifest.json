@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/redux-shopping-cart/static/css/main.7e0a6cc7.css",
+    "main.js": "/redux-shopping-cart/static/js/main.92450bc6.js",
+    "static/media/iphone14.png": "/redux-shopping-cart/static/media/iphone14.a68e30cae224c9f3cf1c.png",
+    "static/media/macbook.jfif": "/redux-shopping-cart/static/media/macbook.76361de3e4b7758f1fd2.jfif",
+    "index.html": "/redux-shopping-cart/index.html",
+    "main.7e0a6cc7.css.map": "/redux-shopping-cart/static/css/main.7e0a6cc7.css.map",
+    "main.92450bc6.js.map": "/redux-shopping-cart/static/js/main.92450bc6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e0a6cc7.css",
+    "static/js/main.92450bc6.js"
+  ]
+}
