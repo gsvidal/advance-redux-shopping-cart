@@ -4,12 +4,14 @@
   <img src="https://i.postimg.cc/HnTy5ktg/ezgif-com-gif-maker-3.gif">
 </a> 
 
-A Shopping Cart where we can add or remove products to the shopping cart and send/fetch data to a backend(firebase)
+### A Shopping Cart where we can add or remove products to the shopping cart and send/fetch data to a backend(firebase)
+<br />
 
-### Main features:
+## Main features:
 - React JS with Redux and redux toolkit app
 - We can add or remove items and their quantity from products list to shopping cart
 - Total price amount in the shopping cart.
+<br />
 
 ## Tech Stack:
 
