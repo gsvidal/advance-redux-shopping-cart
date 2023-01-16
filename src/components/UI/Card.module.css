@@ -6,3 +6,7 @@
   width: 90%;
   max-width: 40rem;
 }
+
+.card.cart {
+  background-color: #313131;
+}

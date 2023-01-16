@@ -4,7 +4,8 @@ const initialCartState = {
   items: [],
   //totalQuantity is shown in the CartButton component
   totalQuantity: 0,
-  // totalAmount: 0,
+  //totalAmount is shown in the Cart component
+  totalAmount: 0,
 };
 
 const cartSlice = createSlice({
@@ -27,6 +28,10 @@ const cartSlice = createSlice({
         existingItem.quantity++;
         existingItem.totalPrice = existingItem.totalPrice + newItem.price;
       }
+      state.totalAmount = state.items.reduce(
+        (acumItem, currentItem) => acumItem + currentItem.totalPrice,
+        0
+      );
     },
     removeItemFromCart(state, action) {
       const id = action.payload;
@@ -38,10 +43,15 @@ const cartSlice = createSlice({
         existingItem.quantity--;
         existingItem.totalPrice = existingItem.totalPrice - existingItem.price;
       }
+      state.totalAmount = state.items.reduce(
+        (acumItem, currentItem) => acumItem + currentItem.totalPrice,
+        0
+      );
     },
     replaceFetchedCart(state, action) {
       state.items = action.payload.items || [];
       state.totalQuantity = action.payload.totalQuantity;
+      state.totalAmount = action.payload.totalAmount;
     },
   },
 });

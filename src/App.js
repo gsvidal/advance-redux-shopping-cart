@@ -12,9 +12,8 @@ function App() {
   const cart = useSelector((state) => state.cart);
   const notification = useSelector((state) => state.ui.notification);
   const isInitialLoading = useSelector((state) => state.ui.isInitialLoading);
-  const dispatch = useDispatch();
 
-  console.log(notification);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchCartData());

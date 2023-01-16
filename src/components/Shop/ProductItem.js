@@ -5,7 +5,7 @@ import { cartActions } from '../../store/cart-slice';
 import { uiActions } from '../../store/ui-slice';
 
 const ProductItem = (props) => {
-  const { id, title, price, description } = props;
+  const { id, title, price, description, imageURL } = props;
 
   const dispatch = useDispatch();
 
@@ -16,14 +16,23 @@ const ProductItem = (props) => {
 
   return (
     <li className={classes.item}>
-      <Card>
-        <header>
-          <h3>{title}</h3>
-          <div className={classes.price}>${price.toFixed(2)}</div>
-        </header>
-        <p>{description}</p>
-        <div className={classes.actions}>
-          <button onClick={addToCartHandler}>Add to Cart</button>
+      <Card className={classes.product}>
+        <img
+          src={imageURL}
+          alt={title}
+          className={classes.image}
+          width="80"
+          height="80"
+        />
+        <div>
+          <header>
+            <h3>{title}</h3>
+            <div className={classes.price}>${price.toFixed(2)}</div>
+          </header>
+          <p>{description}</p>
+          <div className={classes.actions}>
+            <button onClick={addToCartHandler}>Add to Cart</button>
+          </div>
         </div>
       </Card>
     </li>

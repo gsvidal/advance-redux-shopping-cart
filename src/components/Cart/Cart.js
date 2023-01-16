@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 
 const Cart = () => {
   const items = useSelector((state) => state.cart.items);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
 
   return (
     <Card className={classes.cart}>
@@ -15,7 +16,7 @@ const Cart = () => {
             key={id}
             item={{
               id: id,
-              title: `${name} Item`,
+              title: name,
               quantity: quantity,
               total: totalPrice,
               price: price,
@@ -23,6 +24,16 @@ const Cart = () => {
           />
         ))}
       </ul>
+      {totalAmount !== 0 ? (
+        <div className={classes['shop-button-container']}>
+          <p className={classes.total}>
+            Total amount: $ {totalAmount.toFixed(2)}
+          </p>
+          <button>Shop Now</button>
+        </div>
+      ) : (
+        <p className={classes.total}>Your cart is empty</p>
+      )}
     </Card>
   );
 };

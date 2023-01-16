@@ -2,10 +2,12 @@
   margin: 1rem 0;
   background-color: #575757;
   padding: 1rem;
+  border-radius: 7px;
+  color: white;
 }
 
-.item h3 {
-  margin: 0 0 0.5rem 0;
+.item .title {
+  margin: 0 1rem 0.5rem 0;
   font-size: 1.75rem;
 }
 
