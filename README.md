@@ -1,7 +1,9 @@
 # Redux Shopping Cart
 
-<a href="https://www.gonzalovidal.dev/budget-planner-2.0/">
-  <img src="https://i.postimg.cc/HnTy5ktg/ezgif-com-gif-maker-3.gif" width="700">
+## [Check out the Deployed App](https://www.gonzalovidal.dev/redux-shopping-cart/) 
+
+<a href="https://www.gonzalovidal.dev/redux-shopping-cart/">
+  <img src="https://i.postimg.cc/HnTy5ktg/ezgif-com-gif-maker-3.gif" width="600">
 </a> 
 
 ### A Shopping Cart where we can add or remove products to the shopping cart and send/fetch data to a backend(firebase)
@@ -41,6 +43,6 @@
 
 - Git clone the project: `git@github.com:gsvidal/redux-shopping-cart.git`
 
-- Run `npm install` or `yarn add` to download and install all the dependencies.
+- Run `npm install` or `yarn install` to download and install all the dependencies.
 
 - Run `npm run start` to initialize the dev server
